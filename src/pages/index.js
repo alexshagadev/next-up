@@ -1,18 +1,23 @@
 import Head from "next/head";
-import { useState, useEffect } from "react";
+import "../styles/globals.css";
+import ModulesPathway from "../components/ModulesPathway";
 
 export default function Home() {
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-
-  useEffect(() => {
-    setDimensions({ width: window.innerWidth, height: window.innerHeight });
-  }, []);
-
   return (
-    <div className="relative w-screen h-screen">
+    <div className="min-h-screen flex flex-col items-center justify-start text-center">
       <Head>
-        <title>Dot Grid</title>
+        <title>Adulting - A Guide to Becoming Independent</title>
+        <meta name="description" content="A no BS guide to becoming independent" />
       </Head>
+
+      {/* Title */}
+      <h1 className="text-6xl font-bold text-gray-100 mb-4 mt-12">Adulting</h1>
+
+      {/* Subtitle */}
+      <p className="text-xl text-gray-400 mb-12">A no BS guide to becoming independent</p>
+
+      {/* Vertical Modules Pathway */}
+      <ModulesPathway />
     </div>
   );
 }
