@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
-import DotGrid from "../components/DotGrid";
 
 export default function Home() {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -14,10 +13,6 @@ export default function Home() {
       <Head>
         <title>Dot Grid</title>
       </Head>
-      {/* Ensure the DotGrid only renders after dimensions are available */}
-      {dimensions.width > 0 && dimensions.height > 0 && (
-        <DotGrid width={dimensions.width} height={dimensions.height} />
-      )}
     </div>
   );
 }
