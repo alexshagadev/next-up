@@ -44,7 +44,7 @@ body {
   box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.3), 6px 6px 20px rgba(0, 0, 0, 0.4); /* Soft shadow to give the appearance of rounded points */
   position: relative;
   overflow: hidden;
-  transform: scale(1.2); /* Slightly larger by default */
+  transform: scale(1); /* Slightly larger by default */
   transition: transform 0.2s ease-in-out, box-shadow 0.2s;
 }
 

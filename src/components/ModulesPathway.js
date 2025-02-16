@@ -8,7 +8,7 @@ const ModulesPathway = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center mt-60">
+    <div className="flex flex-col items-center mt-20">
       {modules.map((module, index) => {
         let fixedX = 0;
         let fixedY = 120;  // Base Y position for the top row
