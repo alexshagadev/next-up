@@ -1,0 +1,32 @@
+{
+    "quizTitle": "React Quiz",
+    "quizSynopsis": "Test your knowledge of React fundamentals!",
+    "questions": [
+      {
+        "question": "What is React primarily used for?",
+        "questionType": "text",
+        "answerSelectionType": "single",
+        "answers": [
+          "Server-side rendering",
+          "Building user interfaces",
+          "Database management",
+          "Operating systems"
+        ],
+        "correctAnswer": "2",
+        "messageForCorrectAnswer": "Correct! React is for building UIs.",
+        "messageForIncorrectAnswer": "Incorrect. React is mainly for UI development.",
+        "point": 10
+      },
+      {
+        "question": "Which hook is used to manage state in a function component?",
+        "questionType": "text",
+        "answerSelectionType": "single",
+        "answers": ["useState", "useEffect", "useRef", "useContext"],
+        "correctAnswer": "1",
+        "messageForCorrectAnswer": "Correct! `useState` is used for managing state.",
+        "messageForIncorrectAnswer": "Oops! The correct answer is `useState`.",
+        "point": 10
+      }
+    ]
+  }
+  
