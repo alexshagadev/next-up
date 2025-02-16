@@ -8,18 +8,30 @@ const ModulesPathway = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center mt-36"> {/* Increased margin-top to move everything down */}
+    <div className="flex flex-col items-center mt-60">
       {modules.map((module, index) => {
-        // Set fixed values for horizontal and vertical movement
-        const fixedX = index === 2 ? index * -50 : index * 160;  // Bring hexagons closer together
-        const fixedY = index === 0 ? index * 150 + 80 : index === 2 ? index * 150 - 120 : index * 150 + 50;  // Move the first hexagon down a bit more
+        let fixedX = 0;
+        let fixedY = 120;  // Base Y position for the top row
+
+        if (index === 0) {
+          // Position Communication module (left side)
+          fixedX = -120;  // Move left slightly
+        } else if (index === 1) {
+          // Position Finance module (right side) but move it up a bit
+          fixedX = 120;   // Move right slightly
+          fixedY = -55;    // Move Finance up a bit
+        } else if (index === 2) {
+          // Position Productivity module much higher, closer to the other two
+          fixedX = 0;     // Center it horizontally
+          fixedY = -40;   // Move it up closer to Communication and Finance
+        }
 
         return (
           <div
             key={index}
             className={`relative ${module.className}`}
             style={{
-              transform: `translateY(${fixedY}px) translateX(${fixedX}px)`, // Use fixed values for X and Y
+              transform: `translateY(${fixedY}px) translateX(${fixedX}px)`,
             }}
           >
             <Module 
